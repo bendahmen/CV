@@ -1,0 +1,115 @@
+\documentclass{article}
+
+%PACKAGES
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[xcolor]{mdframed}
+\usepackage[margin=2cm]{geometry}
+\usepackage{xifthen}
+\usepackage{nopageno}
+%including links
+\usepackage{hyperref}
+
+%Define title styles
+\titleformat{\section} {\bfseries\large} {} {0em} {}[]
+\titleformat{\subsection} [runin] {\bfseries} {} {0em} {\hspace{0.5em}} [\hspace{0.6em}]
+\titlespacing{\subsection} {0em}{0.25em}{0.8em}
+\titlespacing{\section}{0em}{0.25em}{0.2em}
+
+\renewcommand{\maketitle}{
+\begin{center}
+\huge\bfseries
+\theauthor \\
+\vspace{.25em}
+\end{center}
+}
+
+%shaded regions
+\newmdenv[backgroundcolor=gray!20,
+leftline=false,
+rightline=false,
+bottomline=false,
+topline=false,
+innerbottommargin=0pt]{myframe}
+
+%font
+\renewcommand{\familydefault}{\sfdefault}
+
+% No indentation
+\setlength{\parindent}{0in}
+
+
+% the entry command
+\newcommand{\entry}[4]{
+
+\begin{minipage}[t]{.15\linewidth}
+\flushright {#1}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[c]{.80\linewidth}
+{\bf#2}\hspace{0.3em}\textit{#3}\\ \footnotesize{#4}
+\end{minipage}\\
+\vspace{.2cm}
+}
+
+
+\begin{document}
+\title{CV}
+\author{Benjamin Alessandro Dahmen}
+\maketitle
+
+
+
+
+\section{Education}
+\begin{myframe}
+\entry{09/20 - 07/21}{London School of Economics}{MSc Economics}{Option: Public Economics, Preliminary GPA:74/100 (Distinction)}
+
+\entry{06/16 - 07/19}{Erasmus University Rotterdam}{BSc Economics and Business Economics}{Major: Policy Economics, GPA:8.84/10 (cum laude)}
+
+\entry{09/18 - 01/19}{Fudan University Shanghai}{Major International Economics}{Exchange Semester}
+
+\entry{08/07 - 06/15}{Bischöfliche Marienschule Mönchengladbach}{Abitur (High School Diploma)}{GPA:1.4/1.0}
+\end{myframe}
+
+\section{Research/Work Experience}
+\begin{myframe}
+\entry{09/19 - 03/20}{CPB Netherlands Bureau for Economic Policy Analysis, The Hague\\}{Research Assistant}{RA in the Education, Labour and Pensions Sector}
+
+\entry{07/18 - 08/18}{PwC Düsseldorf}{Intern}{Intern in the Capital Markets and Accounting Advisory Services}
+
+\entry{09/17 - 06/18}{Gradeboost Rotterdam}{Senior Tutor}{Private tutoring and giving group classes for bachelor courses}
+
+\entry{11/17 - 12/17}{Erasmus University Rotterdam}{Teaching Assistant}{Teaching tutorials of the bachelor 1 course ICT}
+
+\entry{09/15 - 11/15}{PAHRO Ghana, Accra}{Volunteer Human Rights Office}{}
+\end{myframe}
+
+\section{Publications}
+\begin{myframe}
+\href{https://www.cpb.nl/en/skill-up-or-get-left-behind-digital-skills-and-labor-market-outcomes-in-the-netherlands}{Skill up or get left behind? Digital skills and labor market outcomes in the Netherlands} (with Marielle Non and Milena Dinkova) CPB Discussion Paper, 2021
+\end{myframe}
+
+\section{Skills and Interests}
+\begin{myframe}
+\entry{Languages}{\textbf{Fluent} \normalfont{German, English} \textbf{Advanced} \normalfont{Italian, Dutch} \textbf{Basic} \normalfont{Spanish}}{}{}
+
+\entry{Coding}{\textbf{Advanced} \normalfont{STATA, R, LaTeX, Python(WebDev)} \textbf{Basic} \normalfont{Git, Python(Data Analysis), SPSS, C, JavaScript}}{}{}
+
+\entry{Model UN}{Awarded as best delegate of my committee during Mediterranean Model UN conference in March 2018 organised by Sciences Po}{}{}
+
+\entry{Hobbies}{Field hockey, Cello (2nd place in state-wide competition “Jugend musiziert”)}{}{}
+\end{myframe}
+
+\subsection{Contact}
+\includegraphics[width=4mm]{img/email.png} \href{mailto:bendahmen@gmail.com}{\tt bendahmen@gmail.com} \hspace{0.7em}
+\includegraphics[width=4mm]{img/phone.png} \tt +49 1590 4345780 \hspace{0.7em}
+\includegraphics[width=4mm]{img/github.png} \href{https://github.com/bendahmen}{\tt github.com/bendahmen}
+
+
+
+
+
+
+\end{document}
